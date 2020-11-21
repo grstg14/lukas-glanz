@@ -70,7 +70,7 @@ export default {
       transition: font-size 1s ease-out;
     }
     .listenLink:hover {
-      font-size:1.5em;
+      font-size:1.25em;
     }
   }
 

@@ -21,11 +21,11 @@
                 mdi-information-outline
               </v-icon>
             </template>
-            <span>Artwork by Matthias Kropfitsch, Digitalized by Johanna Schuh</span>
+            <span>Artwork by Mathias Kropfitsch, Digitalized by Johanna Schuh</span>
           </v-tooltip>
         </div>
-        <div v-else>
-          <div>Artwork by Matthias Kropfitsch</div>
+        <div v-else class="font-weight-thin">
+          <div>Artwork by Mathias Kropfitsch</div>
           <div>Digitalized by Johanna Schuh</div>
         </div>
       </v-col>
