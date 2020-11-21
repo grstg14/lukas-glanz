@@ -24,7 +24,7 @@
             <span>Artwork by Mathias Kropfitsch, Digitalized by Johanna Schuh</span>
           </v-tooltip>
         </div>
-        <div v-else class="font-weight-thin">
+        <div v-else class="font-weight-thin" style="font-size:0.7em;">
           <div>Artwork by Mathias Kropfitsch</div>
           <div>Digitalized by Johanna Schuh</div>
         </div>

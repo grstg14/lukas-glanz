@@ -4,7 +4,7 @@
     <v-container fluid class="mt-0 pt-0">
       <v-row style="height:80vh;">
         <v-col cols="2" :align-self="$vuetify.breakpoint.mobile ? 'start' : 'center'" :class="$vuetify.breakpoint.mobile ? 'mt-12' : ''">
-          <div style="writing-mode: vertical-rl; text-orientation: upright;">LILY LIVERED MUSIC</div>
+          <div v-if="!$vuetify.breakpoint.mobile" style="writing-mode: vertical-rl; text-orientation: upright;">LILY LIVERED MUSIC</div>
         </v-col>
 
         <v-col cols="8">
