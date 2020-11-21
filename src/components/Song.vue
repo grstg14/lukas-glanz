@@ -1,5 +1,5 @@
 <template>
-    <v-layout>
+    <v-container>
         <v-col>
             <v-row>
                 <v-col><div class="headline font-weight-light">WITH THE WOLVES</div></v-col>
@@ -39,7 +39,7 @@
             </v-row>
           
         </v-col>
-    </v-layout>
+    </v-container>
             
             
            

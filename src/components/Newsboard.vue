@@ -2,7 +2,7 @@
     <div style="max-width:250px;">
         <div v-if="displayID!==null">
             <transition name="fade" mode="out-in">
-                <v-layout
+                <v-container
                 :key="displayID"
                 >
                     <v-col>
@@ -44,7 +44,7 @@
                         </v-row>
                         
                     </v-col>
-                </v-layout>
+                </v-container>
             </transition>
        </div>
     </div>

@@ -1,24 +1,77 @@
 <template>
-    <v-row justify="start">
-         <v-col cols="1">
-          <div style="text-align:center; margin-top:60px;">
-            <div><v-icon x-small dark>mdi-instagram</v-icon></div>
-            <div class="caption" style="text-align:center;">I<br>N<br>S<br>T<br>A<br>G<br>R<br>A<br>M</div>
-          </div>
-        </v-col>
-         <v-col cols="1">
-          <div style="text-align:center; margin-top:60px;">
-            <div><v-icon x-small dark>mdi-facebook</v-icon></div>
-            <div >F<br>A<br>C<br>E<br>B<br>O<br>O<br>K</div>
-          </div>
-        </v-col>
-         <v-col cols="1">
-          <div style="text-align:center; margin-top:60px;">
-            <div><v-icon x-small dark>mdi-youtube</v-icon></div>
-            <div style="text-align:center;">Y<br>O<br>U<br>T<br>U<br>B<br>E</div>
-          </div>
-        </v-col>
-
-         
-      </v-row>
+  <v-container fluid>
+    <v-row>
+      <v-col 
+        v-for="(item, i) in items" :key="i"
+        style="max-width:20px;" 
+        class="item"
+      >
+        <v-row justify="center">
+          <v-icon small dark class="ml-0">{{item.icon}}</v-icon>
+        </v-row>
+        <v-row 
+          style="max-width: 40px;"
+          v-if="!$vuetify.breakpoint.mobile" 
+          class="socialMediaCaption mt-2"
+          justify="center"  
+        >
+          {{item.caption}}
+        </v-row>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          'caption': 'Instagram',
+          'link': 'http://google.com',
+          'icon': 'mdi-instagram'
+        },
+        {
+          'caption': 'Facebook',
+          'link': 'http://google.com',
+          'icon': 'mdi-facebook'
+        },
+        {
+          'caption': 'Youtube',
+          'link': 'http://google.com',
+          'icon': 'mdi-youtube'
+        },
+        {
+          'caption': 'Spotify',
+          'link': 'http://google.com',
+          'icon': 'mdi-spotify'
+        },
+        {
+          'caption': 'Itunes',
+          'link': 'http://google.com',
+          'icon': 'mdi-music'
+        }
+      ]
+    }
+  }
+}
+</script>
+<style scoped>
+  .item {
+    cursor: pointer;
+    color: #ccc;
+    filter: blur(0px);
+    transition: color 1s ease, filter 1s ease;
+    
+  }
+  .item:hover {
+    color: #fff;
+    filter:blur(1px);
+  }
+  .socialMediaCaption {
+    writing-mode: vertical-rl; 
+    text-orientation: upright;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+</style>

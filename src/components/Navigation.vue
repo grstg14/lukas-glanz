@@ -1,6 +1,6 @@
 <template>
     <div style="height: 500px;">
-        <v-layout>
+        <v-container>
             <v-col >
                 <v-row class="mt-18">
                 <v-col>
@@ -34,7 +34,7 @@
                 </v-row>-->
                 
             </v-col>
-        </v-layout>
+        </v-container>
      </div>
 </template>
 
