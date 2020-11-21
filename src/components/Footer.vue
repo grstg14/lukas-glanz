@@ -4,8 +4,8 @@
       padless
       absolute
       class="font-weight-medium caption"
-      color="black"
-      style="color:#fff; max-height:10vh; border:1px solid red; overflow:hidden;"
+      color="transparent"
+      style="color:#fff; max-height:10vh; border:1px solid red;"
     >
       <v-col class="text-left">
         <div v-if="$vuetify.breakpoint.mobile">
@@ -30,7 +30,7 @@
         </div>
       </v-col>
       <v-col class="text-center">
-        <a href="https://www.facebook.com/LilyLiveredMusic" target="_blank">Lili Livered Music</a>
+        <a href="https://www.facebook.com/LilyLiveredMusic" target="_blank">Lily Livered Music</a>
       </v-col>
       <v-col class="text-right">
         <v-btn

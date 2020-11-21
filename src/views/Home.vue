@@ -22,7 +22,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-img :src="require('@/assets/lu_trans.png')" max-width="300px" class="signs mx-auto"/>
+        <v-img :src="require('@/assets/lu_trans.png')" max-width="40vh" max-height="40vh" class="signs mx-auto"/>
       </v-col>
     </v-row>
     <v-row>
@@ -61,14 +61,17 @@ export default {
 
   }
   
-
   .listenLink {
     text-decoration:none;
-    transition: font-size 1s ease-out;
   }
 
-  .listenLink:hover {
-    font-size:1.5em;
+  @media (min-width:768px) {
+    .listenLink {
+      transition: font-size 1s ease-out;
+    }
+    .listenLink:hover {
+      font-size:1.5em;
+    }
   }
 
   @keyframes rotation {

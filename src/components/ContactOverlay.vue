@@ -5,7 +5,7 @@
       color="black"
     >
       <v-card
-        min-width="30vw"
+        :style="{'max-width': $vuetify.breakpoint.mobile ? '100vw' : '30vw'}"
       >
         <v-card-title class="display-1">IMPRINT</v-card-title>
         <v-card-text class="body-1">
@@ -33,7 +33,7 @@
             </v-list-item>
 
             <v-list-item class="pr-0">
-              <div style="max-height:20vh; max-width:30vw; overflow-y: scroll;" class="grey--text text--darken-1">
+              <div style="max-height:20vh; overflow-y: scroll;" class="text--darken-1">
                 <p>
                   The website informs about the work of the artist Lukas Glanz and strives to be up-to-date. 
                   All information provided is for information purposes only, without warranty for accuracy and completeness. 

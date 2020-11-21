@@ -17,8 +17,8 @@
             </v-row>
             <v-row>
               <v-col>
-                <v-fade-transition mode="out-in"> <!-- ein "unsichtbarer" Wrapper, der lediglich für coole 'fade-out' Animationen beim wechseln der Route sorgt -->
-                  <router-view></router-view>     <!-- hier wird der Inhalt der aktuellen Route angezeigt(siehe URL-Leiste im Browser und die entsprechenden Route-Links in router.js) -->
+                <v-fade-transition mode="out-in">
+                  <router-view></router-view>    
                 </v-fade-transition>
               </v-col>
             </v-row>
@@ -36,9 +36,6 @@
       </v-row>
     </v-container>
     <Footer />
-    
-    
-    
   </v-app>
 </template>
 
