@@ -1,9 +1,9 @@
 <template>
-  <v-container fluid>
-    <v-row>
+  <v-container>
+    <v-row justify="center">
       <v-col 
         v-for="(item, i) in items" :key="i"
-        style="max-width:20px;" 
+        :style="{'max-width':iconWidth + 'px'}" 
         class="item"
       >
         <a 
@@ -11,7 +11,7 @@
           target="_blank"
         >
           <v-row justify="center">
-            <v-icon small dark class="ml-0">{{item.icon}}</v-icon>
+            <v-icon :medium="medium" :small="small" dark class="ml-0">{{item.icon}}</v-icon>
           </v-row>
           <v-row 
             style="max-width: 40px;"
@@ -28,6 +28,11 @@
 </template>
 <script>
 export default {
+  props: {
+    medium: Boolean,
+    small: Boolean,
+    iconWidth: Number
+  },
   data() {
     return {
       items: [

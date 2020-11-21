@@ -32,21 +32,24 @@
           &nbsp;
           <span style="font-weight:900; font-size:1.1em;">&#xb7;</span>
           &nbsp;
-          <span style="letter-spacing:0.3em;">2020/2021</span>
+          <span style="text-index.0.3em; letter-spacing:0.3em;">2020/2021</span>
         </div>
       </v-col>
+    </v-row>
+    <v-row v-if="$vuetify.breakpoint.mobile">
+      <SocialMedia :medium="true" :iconWidth="40"/>
     </v-row>
   </v-container>
 </template>
 
 <script>
 // @ is an alias to /src
-import Song from '@/components/Song.vue'
+import SocialMedia from '@/components/SocialMedia.vue'
 
 export default {
   name: 'Home',
   components: {
-    Song
+    SocialMedia
   }
 }
 </script>

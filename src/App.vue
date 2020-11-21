@@ -28,7 +28,7 @@
           <v-container class="mt-0 pt-0"> 
             <v-row>
               <v-col>
-                <social-media />
+                <SocialMedia :small="true" :iconWidth="20" v-if="!$vuetify.breakpoint.mobile"/>
               </v-col>
             </v-row>
           </v-container>
