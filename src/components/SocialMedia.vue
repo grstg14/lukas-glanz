@@ -6,17 +6,22 @@
         style="max-width:20px;" 
         class="item"
       >
-        <v-row justify="center">
-          <v-icon small dark class="ml-0">{{item.icon}}</v-icon>
-        </v-row>
-        <v-row 
-          style="max-width: 40px;"
-          v-if="!$vuetify.breakpoint.mobile" 
-          class="socialMediaCaption mt-2"
-          justify="center"  
+        <a 
+          :href="item.link"
+          target="_blank"
         >
-          {{item.caption}}
-        </v-row>
+          <v-row justify="center">
+            <v-icon small dark class="ml-0">{{item.icon}}</v-icon>
+          </v-row>
+          <v-row 
+            style="max-width: 40px;"
+            v-if="!$vuetify.breakpoint.mobile" 
+            class="socialMediaCaption mt-2"
+            justify="center"  
+          >
+            {{item.caption}}
+          </v-row>
+        </a>
       </v-col>
     </v-row>
   </v-container>
@@ -28,27 +33,27 @@ export default {
       items: [
         {
           'caption': 'Instagram',
-          'link': 'http://google.com',
+          'link': 'https://instagram.com/lukasglanzz',
           'icon': 'mdi-instagram'
         },
         {
           'caption': 'Facebook',
-          'link': 'http://google.com',
+          'link': 'https://facebook.com/lukas.glanz',
           'icon': 'mdi-facebook'
         },
         {
           'caption': 'Youtube',
-          'link': 'http://google.com',
+          'link': 'https://www.youtube.com/channel/UCNxYTzqYockZkMJ646Y2WPA',
           'icon': 'mdi-youtube'
         },
         {
           'caption': 'Spotify',
-          'link': 'http://google.com',
+          'link': 'https://artists.spotify.com/c/artist/6ul0q6JSbGHxf7Y6vHuIDb/profile/overview',
           'icon': 'mdi-spotify'
         },
         {
           'caption': 'Itunes',
-          'link': 'http://google.com',
+          'link': 'https://music.apple.com/de/album/touch-single/1540043016',
           'icon': 'mdi-music'
         }
       ]
@@ -62,7 +67,6 @@ export default {
     color: #ccc;
     filter: blur(0px);
     transition: color 1s ease, filter 1s ease;
-    
   }
   .item:hover {
     color: #fff;
@@ -73,5 +77,9 @@ export default {
     text-orientation: upright;
     letter-spacing: 0.3em;
     text-transform: uppercase;
+  }
+
+  a{
+    text-decoration: none;
   }
 </style>

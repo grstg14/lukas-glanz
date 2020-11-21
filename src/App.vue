@@ -2,7 +2,7 @@
   <v-app id="app">
 
     <v-container fluid class="mt-0 pt-0">
-      <v-row style="height:90vh;">
+      <v-row style="height:80vh;">
         <v-col cols="2" :align-self="$vuetify.breakpoint.mobile ? 'start' : 'center'" :class="$vuetify.breakpoint.mobile ? 'mt-12' : ''">
           <div style="writing-mode: vertical-rl; text-orientation: upright;">LILY LIVERED MUSIC</div>
         </v-col>
@@ -35,33 +35,10 @@
         </v-col>
       </v-row>
     </v-container>
-    <v-footer
-      padless
-      absolute
-      class="font-weight-medium caption"
-      color="black"
-      style="color:#fff; max-height:10vh; border:1px solid red; overflow:hidden;"
-    >
-      <v-col class="text-left">
-        <div v-if="$vuetify.breakpoint.mobile">
-          <v-icon color="white">mdi-information-outline</v-icon>
-        </div>
-        <div v-else>
-          <div>Artwork by Matthias Kropfitsch</div>
-          <div>Digitalized by Johanna Schuh</div>
-        </div>
-      </v-col>
-      <v-col class="text-center">
-        Lili Livered Music
-      </v-col>
-      <v-col class="text-right">
-        IMPRESSUM
-      </v-col>
-    </v-footer>
+    <Footer />
     
     
-    <contact-overlay :show="showContact" @closeContactOverlay="showContact=false"/>
-  
+    
   </v-app>
 </template>
 
@@ -70,7 +47,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import SocialMedia from './components/SocialMedia'
-import ContactOverlay from './components/ContactOverlay'
+
 
 
 export default {
@@ -80,8 +57,7 @@ export default {
     Header,
     Footer,
     Navigation,
-    SocialMedia,
-    ContactOverlay
+    SocialMedia
   },
 
   data() {
