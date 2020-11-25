@@ -8,7 +8,7 @@
       style="color:#fff; max-height:10vh; border:1px solid red;"
     >
       <v-col class="text-left">
-        <div v-if="$vuetify.breakpoint.mobile">
+        <div>
           
           <v-tooltip right>
             <template v-slot:activator="{ on, attrs }">
@@ -23,14 +23,24 @@
             </template>
             <span>Artwork by Mathias Kropfitsch, Digitalized by Johanna Schuh</span>
           </v-tooltip>
-        </div>
-        <div v-else class="font-weight-thin" style="font-size:0.8em;">
-          <div>Artwork by Mathias Kropfitsch</div>
-          <div>Digitalized by Johanna Schuh</div>
+          <v-tooltip right>
+            <template v-slot:activator="{ on, attrs }">
+              <v-icon
+                class="ml-2"
+                color="white"
+                dark
+                v-bind="attrs"
+                v-on="on"
+              >
+                mdi-email-outline
+              </v-icon>
+            </template>
+            <span>contact: sophie<v-icon color="white" small>mdi-at</v-icon>lilyliveredmusic.com</span>
+          </v-tooltip>
         </div>
       </v-col>
-      <v-col class="text-center">
-        <a href="http://www.lilyliveredmusic.com" target="_blank">Lily Livered Music</a>
+      <v-col align="center">
+        <a href="http://www.lilyliveredmusic.com" target="_blank"><v-img contain max-width="100" :src="require('@/assets/lily.png')"/></a>
       </v-col>
       <v-col class="text-right">
         <v-btn

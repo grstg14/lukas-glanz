@@ -1,10 +1,11 @@
 <template>
-  <div class="logo display-1">
+  <div class="logo text-h4" style="font-family: 'Abril Fatface' !important;">
     Lukas Glanz
   </div>
 </template> 
 <style>
-    .logo {
-        font-family: 'Zilla Slab Highlight', cursive;
-    }
+  @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+  .logo {
+    font-family: LetterGothicStd;
+  }
 </style>

@@ -8,9 +8,6 @@
           target="_blank"
           class="listenLink"
         >
-          <div class="text-center" style="font-size: 0.8em;">
-            1st<span style="margin-left:10px; letter-spacing: 0.3em">Single</span>
-          </div>
           <div class="text-center font-weight-bold">
             <div style="font-size:1.1em; letter-spacing: 1em; text-indent:1em;">touch</div>
           </div>
@@ -27,12 +24,12 @@
     </v-row>
     <v-row>
       <v-col style="text-align:center;">
-        <div class="text-center">
+        <div class="text-center" style="font-size: 0.8em;">
           8
           &nbsp;
           <span style="font-weight:900; font-size:1.1em;">&#xb7;</span>
           &nbsp;
-          <span style="text-index.0.3em; letter-spacing:0.3em;">2020/2021</span>
+          <span style="text-indentation:0.3em; letter-spacing:0.3em;">2020/2021</span>
         </div>
       </v-col>
     </v-row>
