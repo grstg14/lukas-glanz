@@ -5,9 +5,8 @@
       absolute
       class="font-weight-medium caption"
       color="transparent"
-      style="color:#fff; max-height:10vh; border:1px solid red;"
     >
-      <v-col class="text-left">
+      <v-col class="text-left ma-0 pa-0 ml-1">
         <div>
           
           <v-tooltip right>
@@ -23,50 +22,60 @@
             </template>
             <span>Artwork by Mathias Kropfitsch, Digitalized by Johanna Schuh</span>
           </v-tooltip>
-          <v-tooltip right>
-            <template v-slot:activator="{ on, attrs }">
-              <v-icon
-                class="ml-2"
-                color="white"
-                dark
-                v-bind="attrs"
-                v-on="on"
-              >
-                mdi-email-outline
-              </v-icon>
-            </template>
-            <span>contact: sophie<v-icon color="white" small>mdi-at</v-icon>lilyliveredmusic.com</span>
-          </v-tooltip>
+          <template v-if="$vuetify.breakpoint.mobile">
+            <v-btn
+            @click="showContact=true"
+            icon
+            >
+              <v-icon color="white">mdi-email-outline</v-icon>
+            </v-btn>
+          </template>
         </div>
       </v-col>
-      <v-col align="center">
+      <v-col class="ma-0 pa-0">
         <a href="http://www.lilyliveredmusic.com" target="_blank"><v-img contain max-width="100" :src="require('@/assets/lily.png')"/></a>
       </v-col>
-      <v-col class="text-right">
+      <v-col class="text-right ma-0 pa-0">
         <v-btn
            @click="showImprint=true"
            text
            color="white"
+           
           >
             IMPRESSUM
           </v-btn>
+          
+          <template v-if="!$vuetify.breakpoint.mobile">
+            <v-btn
+            @click="showContact=true"
+            text
+            color="white"
+            class="ma-0 pa-0"
+            >
+              CONTACT
+            </v-btn>
+          </template>
       </v-col>
     </v-footer>
 
-    <contact-overlay :show="showImprint" @close="showImprint=false"/>
+    <contact-overlay :show="showContact" @close="showContact=false"/>
+    <imprint-overlay :show="showImprint" @close="showImprint=false"/>
   
   </div>
 </template>
 
 <script>
 import ContactOverlay from './ContactOverlay'
+import ImprintOverlay from './ImprintOverlay'
   export default {
     components: {
-      ContactOverlay
+      ContactOverlay,
+      ImprintOverlay
     },
 
     data() {
       return {
+        showContact: false,
         showImprint: false,
       }
     }

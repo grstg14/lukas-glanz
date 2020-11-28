@@ -4,7 +4,7 @@
       
       <v-col>
         <a 
-          href="http://hyperurl.co/jdxo1y"
+          href="http://hyperurl.co/LukasGlanztouch"
           target="_blank"
           class="listenLink"
         >
