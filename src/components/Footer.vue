@@ -6,7 +6,7 @@
       class="font-weight-medium caption"
       color="transparent"
     >
-      <v-col class="text-left ma-0 pa-0 ml-1">
+      <v-col :class="($vuetify.breakpoint.mobile) ?  'ma-0 pa-0 ml-1' : false">
         <div>
           
           <v-tooltip right>
@@ -32,20 +32,11 @@
           </template>
         </div>
       </v-col>
-      <v-col class="ma-0 pa-0">
+      <v-col :class="($vuetify.breakpoint.mobile) ?  'ma-0 pa-0 ml-1' : ''" align="center">
         <a href="http://www.lilyliveredmusic.com" target="_blank"><v-img contain max-width="100" :src="require('@/assets/lily.png')"/></a>
       </v-col>
-      <v-col class="text-right ma-0 pa-0">
-        <v-btn
-           @click="showImprint=true"
-           text
-           color="white"
-           
-          >
-            IMPRESSUM
-          </v-btn>
-          
-          <template v-if="!$vuetify.breakpoint.mobile">
+      <v-col :class="($vuetify.breakpoint.mobile) ?  'ma-0 pa-0 ml-1 text-right' : 'text-right'">
+        <template v-if="!$vuetify.breakpoint.mobile">
             <v-btn
             @click="showContact=true"
             text
@@ -55,6 +46,16 @@
               CONTACT
             </v-btn>
           </template>
+        <v-btn
+           @click="showImprint=true"
+           text
+           color="white"
+           
+          >
+            IMPRESSUM
+          </v-btn>
+          
+          
       </v-col>
     </v-footer>
 

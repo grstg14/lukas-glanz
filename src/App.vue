@@ -9,7 +9,7 @@
 
         <v-col cols="8">
           <v-container class="mt-0 pt-0">
-            <v-row style="height:10vh;">
+            <v-row style="height:10vh;" class="mt-2">
               <v-col align="center">
                 <Header />
               </v-col>
@@ -25,13 +25,13 @@
           </v-container>
         </v-col>
         <v-col cols="2">
-          <v-container class="mt-0 pt-0"> 
+          <!--<v-container class="mt-0 pt-0" fluid> 
             <v-row>
-              <v-col>
+              <v-col>-->
                 <SocialMedia :small="true" :iconWidth="20" v-if="!$vuetify.breakpoint.mobile"/>
-              </v-col>
+              <!--</v-col>
             </v-row>
-          </v-container>
+          </v-container>-->
         </v-col>
       </v-row>
     </v-container>
