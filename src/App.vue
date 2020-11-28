@@ -56,16 +56,10 @@ export default {
     Navigation,
     SocialMedia
   },
-
   data() {
-   
    return {
       showContact: false
     }
-  },
-
-  mounted() {
-    console.log(this.$vuetify)
   }
   
 };
