@@ -4,7 +4,7 @@
     <v-container fluid class="mt-0 pt-0">
       <v-row style="height:80vh;">
         <v-col cols="2" :align-self="$vuetify.breakpoint.mobile ? 'start' : 'center'" :class="$vuetify.breakpoint.mobile ? 'mt-8' : ''">
-          <div v-if="!$vuetify.breakpoint.mobile" style="writing-mode: vertical-rl; text-orientation: upright;">A million sparks</div>
+          <div v-if="!$vuetify.breakpoint.mobile" style="font-size:0.7em; writing-mode: vertical-rl; text-orientation: upright; letter-spacing: 1em;">A million sparks</div>
         </v-col>
 
         <v-col cols="8">
