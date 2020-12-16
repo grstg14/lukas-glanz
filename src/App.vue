@@ -60,6 +60,10 @@ export default {
    return {
       showContact: false
     }
+  },
+
+  created() {
+    document.title = "LUKAS GLANZ";
   }
   
 };
