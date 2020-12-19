@@ -23,7 +23,7 @@
             </v-list-item>-->
             <v-list-item>
               <v-list-item-content>
-                <span>contact <v-icon small>mdi-at</v-icon> lukasglanz.com</span>
+                <span>office <v-icon small>mdi-at</v-icon> lukasglanz.com</span>
               </v-list-item-content>
             </v-list-item>
 
