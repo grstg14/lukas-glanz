@@ -39,9 +39,6 @@ import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import SocialMedia from './components/SocialMedia'
 
-require('./assets/style/main.css');
-
-
 export default {
   name: 'App',
 
