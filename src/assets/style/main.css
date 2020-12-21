@@ -1,11 +1,8 @@
-@import url('/assets/fonts/Roboto/Roboto.css');
-
 @font-face {
   font-family: 'AbrilFatface-Regular';
   font-weight: normal;
   src: url('../fonts/AbrilFatface-Regular.ttf') format("truetype")
 }
-
 
 #app {
   background-color: #000;
