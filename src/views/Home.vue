@@ -19,7 +19,7 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-img :src="require('@/assets/lu_trans.png')" max-width="40vh" max-height="40vh" class="signs mx-auto"/>
+        <v-img :src="require('@/assets/lu_trans.webp')" max-width="40vh" max-height="40vh" class="signs mx-auto"/>
       </v-col>
     </v-row>
     <v-row>

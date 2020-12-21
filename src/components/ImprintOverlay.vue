@@ -16,11 +16,6 @@
               Neubaug&uuml;rtel 20/11<br/>
               1070 Wien, Austria
             </v-list-item>
-            <!--<v-list-item>
-              <v-list-item-content>
-                for press or booking contact:            
-              </v-list-item-content>
-            </v-list-item>-->
             <v-list-item>
               <v-list-item-content>
                 <span>office <v-icon small>mdi-at</v-icon> lukasglanz.com</span>

@@ -33,7 +33,7 @@
         </div>
       </v-col>
       <v-col :class="($vuetify.breakpoint.mobile) ?  'ma-0 pa-0 ml-1' : ''" align="center">
-        <a href="http://www.lilyliveredmusic.com" target="_blank"><v-img contain max-width="100" :src="require('@/assets/lily.png')"/></a>
+        <a href="http://www.lilyliveredmusic.com" target="_blank"><v-img contain max-width="100" :src="require('@/assets/lily.webp')"/></a>
       </v-col>
       <v-col :class="($vuetify.breakpoint.mobile) ?  'ma-0 pa-0 ml-1 text-right' : 'text-right'">
         <template v-if="!$vuetify.breakpoint.mobile">
