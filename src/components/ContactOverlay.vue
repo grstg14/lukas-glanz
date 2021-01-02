@@ -31,12 +31,6 @@ export default {
     show: Boolean
   },
 
-  data() {
-    return {
-
-    }
-  },
-
   computed: {
     showContact() {
       return this.show ? true : false

@@ -22,3 +22,5 @@ yarn-error.log*
 *.sw?
 *.bak
 *.bak2
+
+/src/components/_unused

@@ -13,7 +13,6 @@
               <v-col align="center">
                 <Header />
               </v-col>
-              
             </v-row>
             <v-row>
               <v-col>
@@ -36,7 +35,6 @@
 <script>
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Navigation from './components/Navigation';
 import SocialMedia from './components/SocialMedia'
 
 export default {
@@ -45,7 +43,6 @@ export default {
   components: {
     Header,
     Footer,
-    Navigation,
     SocialMedia
   },
   data() {

@@ -82,7 +82,3 @@ import ImprintOverlay from './ImprintOverlay'
     }
 }
 </script>
-
-<style>
-
-</style>
