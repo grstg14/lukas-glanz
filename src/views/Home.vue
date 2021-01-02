@@ -1,9 +1,8 @@
 <template>
   <v-container>
-    <v-row style="height:15vh;">
-      
+    <v-row style="height:15vh;"> 
       <v-col>
-        <a 
+        <!--<a 
           href="http://hyperurl.co/LukasGlanztouch"
           target="_blank"
           class="listenLink"
@@ -14,7 +13,35 @@
           <div class="text-center">
               <span style="font-size:0.7em; letter-spacing:0.2; text-decoration:underline;">listen</span>
           </div>
-        </a>
+        </a>-->
+        <swiper 
+          :options="swiperOptions"
+          effect="fade"
+          class="swiper"
+        >
+          <swiper-slide 
+            v-for="song in songs" 
+            :key="song.id"
+            class="swiper-slide"
+          >
+          <div>
+            <a 
+              href="http://hyperurl.co/LukasGlanztouch"
+              target="_blank"
+              class="listenLink"
+            >
+              <div class="text-center font-weight-bold">
+                <div style="font-size:1.1em; letter-spacing: 1em; text-indent:1em;">{{ song.title }}</div>
+              </div>
+              <div class="text-center">
+                  <span style="font-size:0.7em; letter-spacing:0.2; text-decoration:underline;">listen</span>
+              </div>
+            </a> 
+          </div>
+          </swiper-slide>
+              <div class="swiper-button-prev" slot="button-prev"></div>
+              <div class="swiper-button-next" slot="button-next"></div>
+        </swiper>
       </v-col>
     </v-row>
     <v-row>
@@ -40,13 +67,45 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import SocialMedia from '@/components/SocialMedia.vue'
+import {EffectFade} from 'swiper'
+import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
 
 export default {
   name: 'Home',
   components: {
-    SocialMedia
+    SocialMedia,
+    Swiper,
+    SwiperSlide
+  },
+
+  data() {
+    return {
+      swiperOptions : {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        freeMode: true,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      },
+
+      songs: [
+        {
+          id: 0,
+          title: 'touch',
+          url: 'http://hyperurl.co/LukasGlanztouch'
+        },
+        {
+          id: 1,
+          title: 'witches blood',
+          url: 'http://hyperurl.co/LukasGlanztouch'
+        } 
+      ]
+    }
   }
 }
 </script>
@@ -75,12 +134,29 @@ export default {
   }
 
   @keyframes rotation {
-  from {
-    transform: rotate(0deg);
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
   }
-  to {
-    transform: rotate(359deg);
+
+  .swiper {
+    width: 100%;
+    height:100%;
   }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: white;
 }
 
 </style>
